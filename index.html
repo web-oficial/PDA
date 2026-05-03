@@ -344,10 +344,30 @@
   transform: scale(1.1);
 }
 
+/* RESPONSIVE MENU */
+
+/* En celular: ocultar menú horizontal */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+
+/* En PC: ocultar botón ☰ */
+@media (min-width: 769px) {
+  .menu-btn {
+    display: none;
+  }
+}
 
   </style>
 </head>
 <body>
+
+  <div style="background:#b71c1c; color:white; text-align:center; padding:10px; font-weight:bold; font-size:0.95em;">
+  🔥 Promoción activa hoy • Entregas en Ibagué • Escríbenos antes de que se agoten
+</div>
+
   <!-- ☰ Botón menú -->
  <header>
     <button class="menu-btn" onclick="toggleMenu()">≡</button>
@@ -393,6 +413,24 @@
     </p>
   </main>
 
+  <section style="text-align: center; padding: 40px 20px;">
+
+  <h2 style="font-size: 2em; margin-bottom: 15px;">
+    🚀 Haz tu pedido ahora
+  </h2>
+
+  <p style="font-size: 1.2em; margin-bottom: 25px;">
+    🔥 Entregas HOY en Ibagué • Stock limitado
+  </p>
+
+  <a href="https://wa.me/573133098211?text=Hola%2C%20quiero%20hacer%20un%20pedido"
+     target="_blank"
+     style="background:#25D366; color:white; padding:15px 30px; border-radius:10px; font-size:1.2em; font-weight:bold; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+    💬 🔥 Pedir ahora
+  </a>
+
+</section>
+
   <!-- NUEVAS SECCIONES -->
 
   <!-- RESTO DE TU CÓDIGO ORIGINAL -->
@@ -410,7 +448,7 @@ Nuestro propósito es ofrecer calidad, sabor y salud en cada bocado.</p>
     <!-- Producto 1: unidad -->
     <div class="producto">
       <img src="producto1.jpg.jpg" alt="Rosquitas El Camarita" />
-      <h3>Rosquitas Llaneras</h3>
+      <h3>Rosquitas Llaneras y Palitos</h3>
       <p>Crocantes, sin gluten y deliciosas. Hechas con arroz y queso natural.</p>
 
       <!-- Precio y detalle -->
@@ -420,7 +458,7 @@ Nuestro propósito es ofrecer calidad, sabor y salud en cada bocado.</p>
       <a class="btn-comprar track-cta"
          href="https://wa.me/573133098211?text=Hola%2C%20quiero%20pedir%201%20unidad%20de%20Rosquitas%20Llaneras%20(%245.000)"
          target="_blank" rel="noopener noreferrer">
-        Pedir por WhatsApp
+        🔥 Pedir ahora
       </a>
     </div>
 
@@ -433,33 +471,37 @@ Nuestro propósito es ofrecer calidad, sabor y salud en cada bocado.</p>
       <!-- Precio y detalle: mostrar precio por unidad y total -->
       <p class="precio">Pack de 10 — $4.000 c/u</p>
       <p class="precio-detalle">Total ejemplo: 10 x $4.000 = <strong>$40.000</strong></p>
+      <p style="color:red; font-weight:bold;">🔥 El más vendido</p>
 
       <!-- Botón pedido (mensaje prellenado para pack de 10) -->
       <a class="btn-comprar track-cta"
          href="https://wa.me/573133098211?text=Hola%2C%20quiero%20pedir%20un%20pack%20de%2010%20unidades%20(%244.000%20c/u)%20-%20Total%20%2440.000"
          target="_blank" rel="noopener noreferrer">
-        Pedir pack de 10
+        🚀 Quiero este pack
       </a>
     </div>
 
-    <!-- Producto 3: pack 20+ -->
+    <!-- Producto 3: pack 25+ -->
     <div class="producto">
       <img src="producto3.jpg.jpg" alt="Pan de arroz Ibagué" />
-      <h3>Pack grande — 20+ unidades</h3>
+      <h3>Pack grande — 25+ unidades</h3>
       <p>Ideal para eventos o venta al por mayor. Producto 100% natural.</p>
 
       <!-- Precio y detalle: precio por unidad y ejemplo total -->
-      <p class="precio">Desde $3.500 c/u (para 20 unidades o más)</p>
-      <p class="precio-detalle">Ejemplo: 20 x $3.500 = <strong>$70.000</strong></p>
+      <p class="precio">Desde $3.500 c/u (para 25 unidades o más)</p>
+      <p class="precio-detalle">Ejemplo: 25 x $3.500 = <strong>$87.500</strong></p>
+      
 
-      <!-- Botón pedido (mensaje prellenado para pack 20) -->
+      <!-- Botón pedido (mensaje prellenado para pack 25) -->
       <a class="btn-comprar track-cta"
-         href="https://wa.me/573133098211?text=Hola%2C%20quiero%20informaci%C3%B3n%20y%20pedir%20un%20pack%20de%2020%20unidades%20(%243.500%20c/u)"
+         href="https://wa.me/573133098211?text=Hola%2C%20quiero%20informaci%C3%B3n%20y%20pedir%20un%20pack%20de%2025%20unidades%20(%243.500%20c/u)"
          target="_blank" rel="noopener noreferrer">
-        Pedir pack 20+
+        🚀 Quiero este pack 25+
       </a>
     </div>
 
+
+    
   </div>
 </section>
 <section id="donde-comprar" style="padding: 50px 20px; background: #f8f8f8; text-align: center;">
@@ -584,6 +626,31 @@ Nuestro propósito es ofrecer calidad, sabor y salud en cada bocado.</p>
   })();
 </script>
 
+<section id="opiniones" style="padding: 60px 20px; text-align: center;">
+  <h2>⭐ Opiniones de nuestros clientes</h2>
+
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+
+    <div style="width: 260px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); text-align: left;">
+      <strong>Cliente En Ibagué</strong>
+      <p style="color: #f4b400;">⭐⭐⭐⭐⭐</p>
+      <p>"Las rosquitas son demasiado ricas, súper recomendadas 😍"</p>
+    </div>
+
+    <div style="width: 260px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); text-align: left;">
+      <strong>Carlos R.</strong>
+      <p style="color: #f4b400;">⭐⭐⭐⭐⭐</p>
+      <p>"Muy frescas y crocantes, se nota que son artesanales"</p>
+    </div>
+
+    <div style="width: 260px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); text-align: left;">
+      <strong>Compra Verificada</strong>
+      <p style="color: #f4b400;">⭐⭐⭐⭐⭐</p>
+      <p>"Pedí a domicilio para mi familia y a todos les encantó, fue gratis el domi"</p>
+    </div>
+
+  </div>
+</section>
 
   <footer id="contacto">
     Ibagué, Tolima — Ya disponible en tiendas locales  
